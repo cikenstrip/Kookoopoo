@@ -1,0 +1,2 @@
+class ManagerrouteController < ApplicationController
+end
