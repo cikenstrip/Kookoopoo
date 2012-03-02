@@ -3,6 +3,7 @@ Kookoopoo::Application.routes.draw do
   resources :sales
   resources :customers
   resources :items
+  resources :managerroutes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
