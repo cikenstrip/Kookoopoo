@@ -4,16 +4,16 @@
   <tr>
     <th>No</th>
     <th>Nama</th>
-    <th></th>
+    <th>Manage</th>
     <th></th>
     <th></th>
   </tr>
 
-<% @sales.each do |sale| %>
+<% @salesmen.each do |salesman| %>
   <tr>
-    <td><%= sale.id %></td>
-    <td><%= sale.name %></td>
-    <td><%= link_to 'Buat', new_sale_path %></td>
+    <td><%= salesman.id %></td>
+    <td><%= salesman.name %></td>
+	<td><%= link_to 'Buat', new_salesman_path %></td>
   </tr>
 <% end %>
 </table>

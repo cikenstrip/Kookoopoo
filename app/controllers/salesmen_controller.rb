@@ -1,4 +1,4 @@
-class ManageroutesController < ApplicationController
+class SalesmenController < ApplicationController
   # GET /salesmen
   # GET /salesmen.json
   def index

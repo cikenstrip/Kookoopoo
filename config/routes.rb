@@ -1,5 +1,5 @@
-Kookoopoo::Application.routes.draw do
-  resources :sales
+Kookoopoo::Application.routes.draw do    
+  resources :salesmen
   resources :customers
   resources :items
   resources :manageroutes
