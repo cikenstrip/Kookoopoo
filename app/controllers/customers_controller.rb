@@ -10,6 +10,15 @@ class CustomersController < ApplicationController
     end
   end
 
+  def search
+    param1 = params[:category]
+    @customers = Customer.find(:all,:conditions=>{:category=>param1})
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @customers }
+    end
+  end
+
   # GET /customers/1
   # GET /customers/1.json
   def show

@@ -1,7 +1,14 @@
 Kookoopoo::Application.routes.draw do    
   resources :salesmen
-  resources :customers
+
+  resources :customers do
+       collection do
+         get 'search'
+       end
+     end 
+  
   resources :items
+  
   resources :manageroutes
 
   # The priority is based upon order of creation:
