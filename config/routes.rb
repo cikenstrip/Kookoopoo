@@ -11,6 +11,8 @@ Kookoopoo::Application.routes.draw do
   
   resources :manageroutes
 
+  resources :assignroutes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
