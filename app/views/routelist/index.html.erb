@@ -1,0 +1,29 @@
+<h1>Route List</h1>
+
+<table>
+  <tr>
+    <th>No</th>
+    <th>Tanggal</th>
+    <th>Customer</th>
+    <th>Visiting</th>
+    <th>Delivery</th>
+  </tr>
+
+<% @visiting_route.each do |visiting_route| %>
+  <tr>
+    <td><%= visiting_route.id %></td>
+    <td><%= visiting_route.id %></td>
+	<td><%= visiting_route.customer_id %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+	<table>
+		<% @visiting_route.each do |visiting_route| %>
+			<tr>
+				<th>Salesman :</th>
+				<th><%= visiting_route.sales_id %></th>
+			</tr>
+		<% end %>
+	</table>		
+<br />

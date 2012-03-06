@@ -13,7 +13,8 @@
   <tr>
     <td><%= salesman.id %></td>
     <td><%= salesman.name %></td>
-	<td><%= link_to 'Buat', new_salesman_path %></td>
+	<td><%= link_to 'Create', :controller=>"customers" %></td>
+	<td><%= link_to 'List', {:controller=>"routelist", :action=>"search", :salesman_id=>salesman.id} %></td>
   </tr>
 <% end %>
 </table>

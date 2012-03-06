@@ -3,7 +3,11 @@ Kookoopoo::Application.routes.draw do
   resources :customers
   resources :items
   resources :manageroutes
-
+  resources :routelist do
+	collection do
+		get'search'
+	end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
