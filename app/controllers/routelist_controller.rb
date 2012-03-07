@@ -16,6 +16,5 @@ class RoutelistController < ApplicationController
       format.html { render :index }
       format.json { render json: @visiting_route }
     end
-  end
-  
+  end  
 end
