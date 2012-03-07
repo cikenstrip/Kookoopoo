@@ -12,8 +12,8 @@
   <tr>
     <td><%= customer.id %></td>
     <td><%= customer.name %></td>
-    <td></td>
-    <td></td>
+    <td align="center"><%= check_box_tag(:visiting) %></td>
+    <td align="center"><%= check_box_tag(:delivery) %></td>
   </tr>
 <% end %>
 </table>

@@ -10,17 +10,16 @@ Kookoopoo::Application.routes.draw do
   resources :items
   
   resources :manageroutes
-<<<<<<< HEAD
+
   resources :routelist do
 	collection do
 		get'search'
 	end
   end
-=======
+
 
   resources :assignroutes
 
->>>>>>> 1ddb93041287d568952f355befd210c0156fe976
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
