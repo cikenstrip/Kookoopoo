@@ -13,7 +13,11 @@
   <tr>
     <td><%= salesman.id %></td>
     <td><%= salesman.name %></td>
+<<<<<<< HEAD
 	<td><%= link_to 'Create', {:controller=>"assignroutes", :action=>"search", :salesman_id=>salesman.id} %></td>
+=======
+	<td><%= link_to 'Create', {:controller=>"assignroutes", :id=>salesman.id} %></td>
+>>>>>>> e00c40444ec609c45025924c388c9002bd2471aa
 	<td><%= link_to 'List', {:controller=>"routelist", :action=>"search", :salesman_id=>salesman.id} %></td>
   </tr>
 <% end %>

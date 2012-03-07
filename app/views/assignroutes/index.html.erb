@@ -23,16 +23,16 @@
   <tr>
     <td>Salesman</td>
     <td>:</td>
-    <td></td>
+    <td><%= @salesman.name %></td>
   </tr>
   <tr>
     <td>Date</td>
     <td>:</td>
-    <td></td>
+    <td><%= Time.now.strftime("%d/%m/%Y %H:%M %p") %></td>
   </tr>
   <tr>
     <td>ID</td>
     <td>:</td>
-    <td></td>
+    <td><%= @salesman.employeeid %></td>
   </tr>
 </table>
