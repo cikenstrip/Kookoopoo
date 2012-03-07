@@ -43,15 +43,6 @@ ActiveRecord::Schema.define(:version => 20120305115937) do
     t.datetime "updated_at"
   end
 
-  create_table "sales", :force => true do |t|
-    t.string   "name"
-    t.string   "employeeid"
-    t.string   "photo"
-    t.string   "phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "salesmen", :force => true do |t|
     t.string   "name"
     t.string   "employeeid"

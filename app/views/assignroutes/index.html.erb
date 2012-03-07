@@ -1,0 +1,38 @@
+<h1>Listing customers</h1>
+
+<table>
+  <tr>
+    <th>No</th>
+    <th>Customer</th>
+    <th>Visiting</th>
+    <th>Delivery</th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.id %></td>
+    <td><%= customer.name %></td>
+    <td></td>
+    <td></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<table>
+  <tr>
+    <td>Salesman</td>
+    <td>:</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>:</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ID</td>
+    <td>:</td>
+    <td></td>
+  </tr>
+</table>

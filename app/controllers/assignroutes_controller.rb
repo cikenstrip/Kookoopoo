@@ -1,20 +1,12 @@
-class CustomersController < ApplicationController
-  # GET /customers
+class AssignroutesController < ApplicationController
+	# GET /customers
   # GET /customers.json
   def index
     @customers = Customer.all
-
+	@salesmen = Salesman.first
+	
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @customers }
-    end
-  end
-
-  def search
-    param1 = params[:category]
-    @customers = Customer.find(:all,:conditions=>{:category=>param1})
-    respond_to do |format|
-      format.html { render :index }
       format.json { render json: @customers }
     end
   end
