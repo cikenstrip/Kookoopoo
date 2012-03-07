@@ -10,19 +10,12 @@ Kookoopoo::Application.routes.draw do
   resources :items
   
   resources :manageroutes
-<<<<<<< HEAD
-=======
 
->>>>>>> 1d8d143fb7c71bc5774dea7aec642df4cf8ef88d
   resources :routelist do
 	collection do
 		get'search'
 	end
   end
-<<<<<<< HEAD
-=======
-
->>>>>>> 1d8d143fb7c71bc5774dea7aec642df4cf8ef88d
 
   resources :assignroutes
 
