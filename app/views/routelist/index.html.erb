@@ -7,6 +7,7 @@
     <th>Customer</th>
     <th>Visiting</th>
     <th>Delivery</th>
+	<th>Admin</th>
   </tr>
 
 <% @visiting_route.each do |visiting_route| %>
@@ -14,6 +15,9 @@
     <td><%= visiting_route.id %></td>
     <td><%= visiting_route.id %></td>
 	<td><%= visiting_route.customer_id %></td>
+	<td></td>
+	<td></td>
+	<td><%= link_to 'Order'%></td>
   </tr>
 <% end %>
 </table>
@@ -21,6 +25,10 @@
 	<table>
 	<tr>
 		<th>Salesman :</th>
+		<th><%= @param1 %></th>
+	</tr>
+	<tr>
+		<th>ID Card :</th>
 		<th><%= @param1 %></th>
 	</tr>
 	</table>		
