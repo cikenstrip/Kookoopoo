@@ -1,25 +1,22 @@
 Kookoopoo::Application.routes.draw do    
   resources :salesmen
+ 
   resources :customers do
 	collection do
 		get 'search'
     end
   end   
+ 
   resources :items  
+ 
   resources :manageroutes
-<<<<<<< HEAD
-=======
 
->>>>>>> e00c40444ec609c45025924c388c9002bd2471aa
   resources :routelist do
 	collection do
 		get'search'
 	end
   end
-<<<<<<< HEAD
-=======
 
->>>>>>> e00c40444ec609c45025924c388c9002bd2471aa
   resources :assignroutes
 
   # The priority is based upon order of creation:
