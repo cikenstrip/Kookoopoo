@@ -1,4 +1,5 @@
 Kookoopoo::Application.routes.draw do    
+  resources :purchaseorders
   resources :salesmen
   resources :customers do
 	collection do

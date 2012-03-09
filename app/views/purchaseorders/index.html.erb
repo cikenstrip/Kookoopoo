@@ -1,0 +1,27 @@
+<h1>Listing purchaseorders</h1>
+
+<table>
+  <tr>
+    <th>Purchasedate</th>
+    <th>Purchasenumber</th>
+    <th>Customer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchaseorders.each do |purchaseorder| %>
+  <tr>
+    <td><%= purchaseorder.purchasedate %></td>
+    <td><%= purchaseorder.purchasenumber %></td>
+    <td><%= purchaseorder.customer_id %></td>
+    <td><%= link_to 'Show', purchaseorder %></td>
+    <td><%= link_to 'Edit', edit_purchaseorder_path(purchaseorder) %></td>
+    <td><%= link_to 'Destroy', purchaseorder, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchaseorder', new_purchaseorder_path %>

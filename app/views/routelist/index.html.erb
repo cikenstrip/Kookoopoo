@@ -13,11 +13,11 @@
 <% @visiting_route.each do |visiting_route| %>
   <tr>
     <td><%= visiting_route.id %></td>
-    <td><%= visiting_route.id %></td>
+    <td><%= Time.now.strftime("%d/%m/%Y") %></td>
 	<td><%= visiting_route.customer_id %></td>
 	<td></td>
 	<td></td>
-	<td><%= link_to 'Order'%></td>
+	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@param1} %></td>
   </tr>
 <% end %>
 </table>
@@ -25,11 +25,11 @@
 	<table>
 	<tr>
 		<th>Salesman :</th>
-		<th><%= @param1 %></th>
+		<th><%= Salesman.find(@param1).name %></th>
 	</tr>
 	<tr>
 		<th>ID Card :</th>
-		<th><%= @param1 %></th>
+		<th><%= Salesman.find(@param1).employeeid %></th>
 	</tr>
 	</table>		
 <br />

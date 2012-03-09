@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  purchasedate: 2012-03-08
+  purchasenumber: MyString
+  customer_id: 1
+
+two:
+  purchasedate: 2012-03-08
+  purchasenumber: MyString
+  customer_id: 1
