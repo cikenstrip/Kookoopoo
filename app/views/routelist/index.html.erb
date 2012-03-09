@@ -17,7 +17,7 @@
 	<td><%= visiting_route.customer_id %></td>
 	<td></td>
 	<td></td>
-	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@param1} %></td>
+	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@paramsalesmanid} %></td>
   </tr>
 <% end %>
 </table>
@@ -25,11 +25,11 @@
 	<table>
 	<tr>
 		<th>Salesman :</th>
-		<th><%= Salesman.find(@param1).name %></th>
+		<th><%= Salesman.find(@paramsalesmanid).name %></th>
 	</tr>
 	<tr>
 		<th>ID Card :</th>
-		<th><%= Salesman.find(@param1).employeeid %></th>
+		<th><%= Salesman.find(@paramsalesmanid).employeeid %></th>
 	</tr>
 	</table>		
 <br />

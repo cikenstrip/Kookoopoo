@@ -21,10 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :customer_id %><br />
-    <%= f.number_field :customer_id %>
+    <%= f.number_field :Customer.find(:customer_id).name %>
   </div>
   <div class="field">
-    <%= f.hidden_field :customer_id %>
+    <%= f.hidden_field :salesmen_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
