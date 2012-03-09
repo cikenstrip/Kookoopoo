@@ -1,20 +1,19 @@
-<h1>List Sales</h1>
+<h1>Manage Route</h1>
 
 <table>
   <tr>
     <th>No</th>
     <th>Nama</th>
     <th>Manage</th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @salesmen.each do |salesman| %>
   <tr>
     <td><%= salesman.id %></td>
     <td><%= salesman.name %></td>
-	<td><%= link_to 'Create', {:controller=>"assignroutes", :id=>salesman.id} %></td>
-	<td><%= link_to 'List', {:controller=>"routelist", :salesman_id=>salesman.id} %></td>
+	  <td>
+      <%= link_to 'Create', {:controller=>"assignroutes", :id=>salesman.id} %>
+      <%= link_to 'List', {:controller=>"routelist", :salesman_id=>salesman.id} %></td>
   </tr>
 <% end %>
 </table>

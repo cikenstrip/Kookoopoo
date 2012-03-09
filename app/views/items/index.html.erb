@@ -6,11 +6,8 @@
     <th>Category</th>
     <th>Unit</th>
     <th>Price</th>
-    <th>Photo</th>
     <th>Code</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Manage</th>
   </tr>
 
 <% @items.each do |item| %>
@@ -19,11 +16,11 @@
     <td><%= item.category %></td>
     <td><%= item.unit %></td>
     <td><%= item.price %></td>
-    <td><%= item.photo %></td>
     <td><%= item.code %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+    <td>
+    <%= link_to 'Show', item %>
+    <%= link_to 'Edit', edit_item_path(item) %>
+    <%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
