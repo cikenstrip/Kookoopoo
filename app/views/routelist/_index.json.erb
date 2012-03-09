@@ -1,12 +1,9 @@
 [
 <% @visiting_route.each do |visiting_route| %>
 {
-"created_at": <%= Time.now.strftime("%d/%m/%Y") %>,
 "customer_id": <%= visiting_route.customer_id %>,
 "id": <%= visiting_route.id %>,
 "salesman_id": <%= @paramsalesmanid %>
 } <%= "," if (visiting_route.id != @visiting_route.last.id) %>
 <% end %>
 ]
-
-
