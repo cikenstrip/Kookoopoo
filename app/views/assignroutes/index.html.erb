@@ -1,4 +1,4 @@
-<h1>Listing customers</h1>
+<h1>Assign Customer To Salesmen</h1>
 
 <table>
   <tr>
@@ -12,8 +12,8 @@
   <tr>
     <td><%= customer.id %></td>
     <td><%= customer.name %></td>
-    <td align="center"><%= check_box_tag(:visiting) %></td>
-    <td align="center"><%= check_box_tag(:delivery) %></td>
+    <td><%= check_box_tag(:visiting) %></td>
+    <td><%= check_box_tag(:delivery) %></td>
   </tr>
 <% end %>
 </table>
