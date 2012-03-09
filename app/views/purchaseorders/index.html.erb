@@ -5,6 +5,7 @@
     <th>Purchasedate</th>
     <th>Purchasenumber</th>
     <th>Customer</th>
+	<th>Salesmen</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= purchaseorder.purchasedate %></td>
     <td><%= purchaseorder.purchasenumber %></td>
     <td><%= purchaseorder.customer_id %></td>
+	<td><%= purchaseorder.salesmen_id %></td>
     <td><%= link_to 'Show', purchaseorder %></td>
     <td><%= link_to 'Edit', edit_purchaseorder_path(purchaseorder) %></td>
     <td><%= link_to 'Destroy', purchaseorder, confirm: 'Are you sure?', method: :delete %></td>

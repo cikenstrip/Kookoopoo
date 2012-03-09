@@ -15,6 +15,10 @@
   <%= @purchaseorder.customer_id %>
 </p>
 
+<p>
+  <b>Salesmen:</b>
+  <%= @purchaseorder.salesmen_id %>
+</p>
 
 <%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |
 <%= link_to 'Back', purchaseorders_path %>

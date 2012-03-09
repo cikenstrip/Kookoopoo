@@ -26,6 +26,7 @@ class PurchaseordersController < ApplicationController
   def new
     @purchaseorder = Purchaseorder.new
 	@purchaseorder.customer_id = params[:customer_id]
+	@purchaseorder.salesmen_id = params[:salesmen_id]
 	
     respond_to do |format|
       format.html # new.html.erb

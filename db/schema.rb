@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(:version => 20120309064029) do
   end
 
   create_table "visiting_routes", :force => true do |t|
-    t.integer  "sales_id"
+    t.integer  "salesman_id"
     t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
