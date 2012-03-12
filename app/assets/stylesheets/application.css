@@ -76,14 +76,14 @@ h2 {color:#333; font-size:1.4em; padding:0px; line-height:1.1em; margin:0px; fon
 #headertopnav ul {list-style:none; margin:0;}
 #headertopnav ul li {display:inline; padding:0px 10px; color:#fff;}
 #headertopnav ul li a, #headertopnav ul li a:active {color:#fff; font-size:16px; text-decoration:none;}
-#headertopnav ul li a:hover {color:#000;}
+#headertopnav ul li a:hover {color:#fff;}
 
 /* subheader */
 #longroundedtop {padding:0px; background: #333; filter:alpha(opacity=70);opacity:.7; height:48px; color:#fff; text-align:left;} 
 #longroundedtop ul {padding:10px; list-style:none; margin:0;}
 #longroundedtop ul li {display:inline; padding:0px 16px;}
 #longroundedtop ul li a, #longroundedtop ul li a:active {color:#fff; font-size:16px; text-decoration:none;}
-#longroundedtop ul li a:hover {color:#999;}
+#longroundedtop ul li a:hover {color:#fff;}
 
 /* midquote */
 #midquote {-moz-border-radius: 12px; -webkit-border-radius: 16px; background:#c7e0ff; color:#0d396a; border:1px solid #0d396a; padding:18px; text-align:center; font-size:1.2em;}
