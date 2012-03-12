@@ -1,4 +1,13 @@
+<div id="tableheader">
 <h1>Assign Customer To Salesmen</h1>
+</div>
+
+<div id="tableinfo">
+<p>Salesman: <%= @salesman.name %></p>
+<p>Date: <%= Time.now.strftime("%d/%m/%Y %H:%M %p") %></p>
+<p>Employee ID: <%= @salesman.employeeid %></p>
+</div>
+
 <%= form_tag({:controller => "assignroutes", :action => "create"}, :method => "post") do %>
 <table>
   <tr>
@@ -23,22 +32,4 @@
     <%= submit_tag "Create Route" %>
   </div>
 </p>
-<br />
-<table>
-  <tr>
-    <td>Salesman</td>
-    <td>:</td>
-    <td><%= @salesman.name %></td>
-  </tr>
-  <tr>
-    <td>Date</td>
-    <td>:</td>
-    <td><%= Time.now.strftime("%d/%m/%Y %H:%M %p") %></td>
-  </tr>
-  <tr>
-    <td>ID</td>
-    <td>:</td>
-    <td><%= @salesman.employeeid %></td>
-  </tr>
-</table>
 <% end %>

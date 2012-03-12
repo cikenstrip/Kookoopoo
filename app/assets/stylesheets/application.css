@@ -1,7 +1,8 @@
 body {font: 12px sans-serif;}
 a {color: #444; text-decoration: none; text-align: right;}
 a:hover {background: #444; color: #FFF;}
-
+form {padding: 10px;}
+h1 {padding:6px; margin:0px; font-family:sans-serif; font-weight:normal; font-size:20px;}
 
 caption {font-size: 1.7em; color: #F06; text-align: left;background:#000;}
 table {margin: 0; padding: 0; border-collapse: collapse; width: 100%;}
@@ -45,7 +46,7 @@ table th:last-child {
 -moz-border-bottom-right-radius: 12px; -webkit-border-bottom-right-radius: 12px; border-bottom-right-radius: 12px; 
 }
 
-h1 {width:100%; margin:2px 0; padding:20px 0; color:#fff; font-family:sans-serif; font-weight:normal; font-size:20px;
+#tableheader {width:100%; padding:20px 0; color:#fff; 
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
 background-image: linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
 background-image: -o-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
@@ -61,3 +62,21 @@ background-image: -webkit-gradient(
 	color-stop(0.79, rgb(0,0,0))
 );
 }
+
+#tableinfo {width:100%; margin-top:4px; padding:20px 0; color:#333; 
+-moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
+background-image: linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: -o-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.33, rgb(184,184,184)),
+	color-stop(0.73, rgb(214,214,214)),
+	color-stop(1, rgb(217,217,217))
+);
+}
+#tableinfo p {padding:2; margin:0 10px;}
