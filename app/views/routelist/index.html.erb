@@ -24,7 +24,7 @@
 	<td><%= Customer.find(visiting_route.customer_id).name %></td>
 	<td></td>
 	<td></td>
-	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@paramsalesmanid} %></td>
+	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@paramsalesmanid}, :class=>'buttons' %></td>
   </tr>
 <% end %>
 </table>

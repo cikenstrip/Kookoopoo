@@ -18,9 +18,9 @@
     <td><%= customer.category %></td>
     <td><%= customer.phone %></td>
     <td>
-    <%= link_to 'Show', customer %>
-    <%= link_to 'Edit', edit_customer_path(customer) %>
-    <%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Show', customer, :class=>'buttons' %>
+    <%= link_to 'Edit', edit_customer_path(customer), :class=>'buttons' %>
+    <%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete, :class=>'buttons' %>
     </td>
   </tr>
 <% end %>

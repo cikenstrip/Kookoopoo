@@ -16,9 +16,9 @@
     <td><%= salesman.employeeid %></td>
     <td><%= salesman.phone %></td>
     <td>
-    <%= link_to 'Show', salesman %>
-    <%= link_to 'Edit', edit_salesman_path(salesman) %>
-    <%= link_to 'Destroy', salesman, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Show', salesman, :class=>'buttons' %>
+    <%= link_to 'Edit', edit_salesman_path(salesman), :class=>'buttons' %>
+    <%= link_to 'Destroy', salesman, confirm: 'Are you sure?', method: :delete, :class=>'buttons' %>
     </td>
   </tr>
 <% end %>
@@ -26,4 +26,4 @@
 
 <br />
 
-<%= link_to 'New Salesman', new_salesman_path %>
+<%= link_to 'New Salesman', new_salesman_path, :class=>'buttons' %>

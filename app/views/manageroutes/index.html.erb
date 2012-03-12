@@ -13,9 +13,10 @@
   <tr>
     <td><%= salesman.id %></td>
     <td><%= salesman.name %></td>
-	  <td>
-      <%= link_to 'Create', {:controller=>"assignroutes", :id=>salesman.id} %> |
-      <%= link_to 'List', {:controller=>"routelist", :salesman_id=>salesman.id} %></td>
+	<td>
+		<%= link_to 'Create', {:controller=>"assignroutes", :id=>salesman.id}, :class=>'buttons' %>
+		<%= link_to 'List', {:controller=>"routelist", :salesman_id=>salesman.id}, :class=>'buttons' %>
+	</td>
   </tr>
 <% end %>
 </table>

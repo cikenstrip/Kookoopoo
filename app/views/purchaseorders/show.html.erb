@@ -20,5 +20,5 @@
   <%= Salesman.find(@purchaseorder.salesmen_id).name %>
 </p>
 
-<%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |
-<%= link_to 'Back', purchaseorders_path %>
+<%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder), :class=>'buttons' %>
+<%= link_to 'Back', purchaseorders_path, :class=>'buttons' %>
