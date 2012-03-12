@@ -8,7 +8,75 @@
 </head>
 <body>
 
-<%= yield %>
+
+  <div class="container">
+	  <div class="span-10"> 
+		  <a href=""><%= image_tag "logo.png", :id=>"headerlogo" %></a>
+	  </div>    
+	  <div class="span-13  last" id="headertopnav"> 
+		  <ul>	
+		  <li>Home</li>
+		  <li>Home</li>
+		  <li>Home</li>
+		  </ul>
+	  </div>  
+    <div class="span-24 last" id="longroundedtop" style="text-align:left;">
+	  <ul>	
+	  <li>Home</li>
+	  <li>Home</li>
+	  </ul>
+    </div> 
+  </div>
+  
+  <div class="container yield">
+
+    <div class="span-24 last">    
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        <%- end -%>
+    </div>
+
+    <% if params[:controller]=="home" then -%>
+    <div id="tripleopening" class="span-24 last">
+      <div class="span-1">&nbsp;</div>
+      <div class="span-7">
+      <%= link_to image_tag("backgroundtriple01.png"), :controller=>"/places" %>
+      </div>
+      <div class="span-7">
+      <%= link_to image_tag("backgroundtriple02.png"), :controller=>"/about" %>
+      </div>
+      <div class="span-7 last">
+      <%= link_to image_tag("backgroundtriple02.png"), :controller=>"/about" %>
+      </div>
+    </div>
+  
+    <div class="span-2">&nbsp;</div>
+    <div class="span-20">
+      <div id="midquote">
+      <em>Aplikasi Survey Lokasi Pelanggan merupakan aplikasi internal PDAM Tirta Siak. Input data dilakukan via Mobile Application via handset yang sudah terdaftar. Untuk akses download dan update data internal silakan hubungi bagian yang berkepentingan.</em>
+      </div>
+    </div>    
+    <div class="span-2 last">&nbsp;</div>  
+    <%- end -%>
+  </div>
+
+  <div class="container yield">
+    <br />
+    <div class="span-1">&nbsp;</div>
+    <div class="span-22">
+      <%= yield %>
+    </div>    
+    <div class="span-1 last">&nbsp;</div>   
+  </div>  
+
+  <div class="container">
+	  <div class="span-24 last" id="longroundedbottom">
+		  &nbsp;
+	  </div> 
+	  <div class="span-24 last" id="longroundedend">
+		  © 2011 PDAM Tirta Siak & PT Jerbee Indonesia, info@jerbeeindonesia.com
+	  </div>
+  </div>
 
 </body>
 </html>
