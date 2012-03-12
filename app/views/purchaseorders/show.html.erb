@@ -12,12 +12,12 @@
 
 <p>
   <b>Customer:</b>
-  <%= @purchaseorder.customer_id %>
+  <%= Customer.find(@purchaseorder.customer_id).name %>
 </p>
 
 <p>
   <b>Salesmen:</b>
-  <%= @purchaseorder.salesmen_id %>
+  <%= Salesman.find(@purchaseorder.salesmen_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |

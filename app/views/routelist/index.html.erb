@@ -16,7 +16,7 @@
   <tr>
     <td><%= visiting_route.id %></td>
     <td><%= Time.now.strftime("%d/%m/%Y") %></td>
-	<td><%= visiting_route.customer_id %></td>
+	<td><%= Customer.find(visiting_route.customer_id).name %></td>
 	<td></td>
 	<td></td>
 	<td><%= link_to 'Order', {:controller=>"purchaseorders", :action=>"new", :customer_id=>visiting_route.customer_id, :salesmen_id=>@paramsalesmanid} %></td>
