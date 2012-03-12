@@ -1,5 +1,5 @@
 <h1>Assign Customer To Salesmen</h1>
-
+<%= form_tag({:controller => "assignroutes", :action => "create"}, :method => "post") do %>
 <table>
   <tr>
     <th>No</th>
@@ -12,12 +12,17 @@
   <tr>
     <td><%= customer.id %></td>
     <td><%= customer.name %></td>
-    <td><%= check_box_tag(:visiting) %></td>
-    <td><%= check_box_tag(:delivery) %></td>
+    <td><%= check_box_tag("visiting[]", customer.id) %></td>
+    <td><%= check_box_tag("delivery[]", customer.id) %></td>
   </tr>
 <% end %>
 </table>
-
+<p>
+  <div class="actions">
+    <%= hidden_field_tag("salesman_id", @salesman.id) %>
+    <%= submit_tag "Create Route" %>
+  </div>
+</p>
 <br />
 <table>
   <tr>
@@ -36,3 +41,4 @@
     <td><%= @salesman.employeeid %></td>
   </tr>
 </table>
+<% end %>

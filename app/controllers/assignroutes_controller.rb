@@ -10,4 +10,16 @@ class AssignroutesController < ApplicationController
       format.json { render json: @customers }
     end
   end
+
+  def create
+    @paramsalesmanid = params[:salesman_id]
+    @visitingroutes = params[:visiting]
+
+    @visitingroutes.each do |visitingroute|
+      visitingrouteitem = VisitingRoute.new( :salesman_id => @paramsalesmanid, :customer_id => visitingroute)
+      visitingrouteitem.save
+    end
+        
+  end
+    
 end

@@ -1,4 +1,4 @@
-class Visiting_route < ActiveRecord::Base
-	belongs_to :salesman
-	belongs_to :customer
+class VisitingRoute < ActiveRecord::Base
+	#belongs_to :salesman
+	#belongs_to :customer
 end

@@ -1,3 +1,3 @@
 class Customer < ActiveRecord::Base
-	has_many :visiting_route, :dependent => :destroy
+	#has_many :visiting_routes, :dependent => :destroy
 end
