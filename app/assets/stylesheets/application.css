@@ -86,7 +86,7 @@ h2 {color:#333; font-size:1.4em; padding:0px; line-height:1.1em; margin:0px; fon
 #longroundedtop ul li a:hover {color:#fff;}
 
 /* midquote */
-#midquote {-moz-border-radius: 12px; -webkit-border-radius: 16px; background:#c7e0ff; color:#0d396a; border:1px solid #0d396a; padding:18px; text-align:center; font-size:1.2em;}
+#midquote {-moz-border-radius: 12px; -webkit-border-radius: 16px; background:#eeeeee; color:#555555; border:1px solid #888888; padding:18px; text-align:center; font-size:1.2em;}
 
 /* footer */
 #longroundedbottom {padding:0px; height:5px; background: #fff;} 
