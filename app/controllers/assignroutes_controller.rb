@@ -13,13 +13,18 @@ class AssignroutesController < ApplicationController
 
   def create
     @paramsalesmanid = params[:salesman_id]
+    
+    if params[:visiting]!=nil
     @visitingroutes = params[:visiting]
-
     @visitingroutes.each do |visitingroute|
       visitingrouteitem = VisitingRoute.new( :salesman_id => @paramsalesmanid, :customer_id => visitingroute)
       visitingrouteitem.save
     end
-        
+    end
+    
+    @visiting_route = VisitingRoute.find(:all,:conditions=>{:salesman_id=> @paramsalesmanid})
+    
+    render "routelist/index",:salesman_id=>@paramsalesmanid
   end
     
 end
