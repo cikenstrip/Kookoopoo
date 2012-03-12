@@ -1,4 +1,4 @@
-body {font: 12px sans-serif;}
+body {padding:5px; margin:0; font: 12px sans-serif;}
 a {color: #444; text-decoration: none; text-align: right;}
 a:hover {background: #444; color: #FFF;}
 form {padding: 10px;}
@@ -46,7 +46,7 @@ table th:last-child {
 -moz-border-bottom-right-radius: 12px; -webkit-border-bottom-right-radius: 12px; border-bottom-right-radius: 12px; 
 }
 
-#tableheader {width:100%; padding:20px 0; color:#fff; 
+#tableheader {width:100%; margin:2px 0; padding:20px 0; color:#fff; 
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
 background-image: linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
 background-image: -o-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
@@ -63,7 +63,7 @@ background-image: -webkit-gradient(
 );
 }
 
-#tableinfo {width:100%; margin-top:4px; padding:20px 0; color:#333; 
+#tableinfo {width:100%; margin:2px 0; padding:20px 0; color:#333; 
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
 background-image: linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
 background-image: -o-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
