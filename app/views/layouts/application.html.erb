@@ -4,7 +4,9 @@
   <title>Kookoopoo: Mobile Sales System</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "OpenLayers" %>  
   <%= csrf_meta_tags %>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAYV1B_g5Mt-hNsW0vaYdv2RTq4TV2denRdnxNMBI4tKBAvRgtmxSY5RKxQ3g8oGJProOdI9VaylFz_A" type="text/javascript"></script>   
 </head>
 <body>
 
@@ -15,7 +17,8 @@
 	  </div>    
 	  <div class="span-13  last" id="headertopnav"> 
 		  <ul>	
-      <li><%= link_to 'Home', :controller=>"/home" %></li> 
+      <li><%= link_to 'Home', :controller=>"/home" %></li>
+      <li><%= link_to 'Login', :controller=>"/home" %></li>       
 		  </ul>
 	  </div>  
     <div class="span-24 last" id="longroundedtop" style="text-align:left;">
@@ -30,6 +33,44 @@
   </div>
   
   <div class="container yield">
+
+    <% if params[:controller]=="home" then -%>
+    <div id="opening" class="span-24 last"> 
+      <div class="span-24 last" id="map" style="padding:0px; width:950px; height:270px;">
+      </div>  
+    </div>
+    <script type="text/javascript"> 
+      var map = new OpenLayers.Map('map');
+      var gmap = new OpenLayers.Layer.Google("Google Streets",{numZoomLevels: 20});
+      map.addLayers([gmap]);
+      map.setCenter(new OpenLayers.LonLat(106.84517, -6.21154), 11);         
+      var markers = new OpenLayers.Layer.Markers("Markers");
+      var size = new OpenLayers.Size(48,48);
+      var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+      var icon = new OpenLayers.Icon('http://<%= request.env["HTTP_HOST"] %>/images/markerz.png',size,offset);
+      function markerize(lat,lon,html) {
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat(lat,lon),icon.clone());    
+        marker.events.register('mousedown', marker, function(evt) { 
+          popup = new OpenLayers.Popup("",
+          new OpenLayers.LonLat(lat, lon),
+          new OpenLayers.Size(200,100),html, true);
+          popup.border = "solid 1px #6d9100";     
+          map.addPopup(popup); 
+        });  
+        markers.addMarker(marker); 
+      }
+      <%
+      #@places = Place.find(:all,:order=>"random()", :limit=>"3")
+      #@places.each do |place| 
+      %>
+      <%= #"markerize(#{place.longitude},#{place.latitude},'<b>#{place.name}</b><br/>#{place.streetaddress}');".html_safe 
+      %>
+      <% 
+      #end 
+      %>
+      map.addLayer(markers);     
+    </script>         
+    <%- end -%>
 
     <div class="span-24 last">    
         <%- flash.each do |name, msg| -%>
