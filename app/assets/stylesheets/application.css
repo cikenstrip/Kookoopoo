@@ -21,22 +21,8 @@ th a:hover {color: #F06; text-decoration: underline;}
 tr th {color: #FFF; background:#000;}
 tr {font: 12px sans-serif; background: url(prettyinpink_row.png) repeat-x #F8F8F8; color: #666;}
 tr:hover {background: #FFF;}
+tr th {padding:15px 0;}
 
-tr th {padding:15px 0;
-background-image: linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -o-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -moz-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -webkit-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -ms-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.28, rgb(66,65,66)),
-	color-stop(0.64, rgb(15,13,14)),
-	color-stop(0.79, rgb(0,0,0))
-);
-}
 table th:first-child {
 -moz-border-top-left-radius: 12px; -webkit-border-top-left-radius: 12px; border-top-left-radius: 12px;
 -moz-border-bottom-left-radius: 12px; -webkit-border-bottom-left-radius: 12px; border-bottom-left-radius: 12px; 
@@ -47,36 +33,63 @@ table th:last-child {
 }
 
 #tableheader {width:100%; margin:2px 0; padding:20px 0; color:#fff; 
--moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
-background-image: linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -o-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -moz-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -webkit-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -ms-linear-gradient(bottom, rgb(66,65,66) 28%, rgb(15,13,14) 64%, rgb(0,0,0) 79%);
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.28, rgb(66,65,66)),
-	color-stop(0.64, rgb(15,13,14)),
-	color-stop(0.79, rgb(0,0,0))
-);
-}
-
+-moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	}
 #tableinfo {width:100%; margin:2px 0; padding:20px 0; color:#333; 
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
-background-image: linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
-background-image: -o-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(184,184,184) 33%, rgb(214,214,214) 73%, rgb(217,217,217) 100%);
+background-image: linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
+background-image: -o-linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
+
 background-image: -webkit-gradient(
 	linear,
 	left bottom,
 	left top,
-	color-stop(0.33, rgb(184,184,184)),
-	color-stop(0.73, rgb(214,214,214)),
-	color-stop(1, rgb(217,217,217))
+	color-stop(0.31, rgb(176,176,176)),
+	color-stop(0.73, rgb(219,219,219)),
+	color-stop(1, rgb(235,235,235))
 );
 }
 #tableinfo p {padding:2; margin:0 10px;}
+#tableheader, tr th {
+background-image: linear-gradient(bottom, rgb(23,23,23) 31%, rgb(54,54,54) 73%, rgb(102,100,102) 100%);
+background-image: -o-linear-gradient(bottom, rgb(23,23,23) 31%, rgb(54,54,54) 73%, rgb(102,100,102) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(23,23,23) 31%, rgb(54,54,54) 73%, rgb(102,100,102) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(23,23,23) 31%, rgb(54,54,54) 73%, rgb(102,100,102) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(23,23,23) 31%, rgb(54,54,54) 73%, rgb(102,100,102) 100%);
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.31, rgb(23,23,23)),
+	color-stop(0.73, rgb(54,54,54)),
+	color-stop(1, rgb(102,100,102))
+);	
+}
+
+.buttons, input[type="submit"]{
+    display:block;
+    float:left;
+    margin:0 7px 0 0;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:12px;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    padding:5px 10px 6px 7px; /* Links */
+}
+.buttons, input[type="submit"]{
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+.buttons, input[type="submit"]{
+    padding:5px 10px 5px 7px; /* Firefox */

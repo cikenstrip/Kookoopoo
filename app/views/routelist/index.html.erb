@@ -2,6 +2,11 @@
 <h1>Route List</h1>
 </div>
 
+<div id="tableinfo">
+<p>Salesman: <%= Salesman.find(@paramsalesmanid).name %></p>
+<p>Employee ID: <%= Salesman.find(@paramsalesmanid).employeeid %></p>
+</div>
+
 <table>
   <tr>
     <th>No</th>
@@ -23,15 +28,3 @@
   </tr>
 <% end %>
 </table>
-<br />
-	<table>
-	<tr>
-		<td>Salesman :</td>
-		<td><%= Salesman.find(@paramsalesmanid).name %></td>
-	</tr>
-	<tr>
-		<td>ID Card :</td>
-		<td><%= Salesman.find(@paramsalesmanid).employeeid %></td>
-	</tr>
-	</table>		
-<br />
