@@ -1,3 +1,41 @@
+  <div style="float:left; padding-right:40px;">
+    <div id="map" style="padding:0px; width:400px; height:300px;">
+    <small>Zoom and click on the map to add the place's new coordinate:</small>
+    </div> 
+    <script type="text/javascript"> 
+      var map = new OpenLayers.Map('map');
+      var gmap = new OpenLayers.Layer.Google("Google Streets",{numZoomLevels: 20});
+      map.addLayers([gmap]);
+      map.setCenter(new OpenLayers.LonLat(106.84517, -6.21154), 11);         
+      var markers = new OpenLayers.Layer.Markers("Markers");
+      var size = new OpenLayers.Size(32,32);
+      var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+      var icon = new OpenLayers.Icon('http://<%= request.env["HTTP_HOST"] %>/assets/markerz.png',size,offset);
+      function markerize(lat,lon,html) {
+        marker = new OpenLayers.Marker(new OpenLayers.LonLat(lat,lon),icon.clone());    
+        marker.events.register('mousedown', marker, function(evt) { 
+          popup = new OpenLayers.Popup("",
+          new OpenLayers.LonLat(lat, lon),
+          new OpenLayers.Size(200,100),html, true);
+          popup.border = "solid 1px #6d9100";     
+          map.addPopup(popup); 
+        });  
+        markers.addMarker(marker); 
+      }
+      <%
+      @positions = Position.find(:all,:conditions=>{:salesman_id=>@salesman.id},:limit=>"20")
+      @positions.each do |position| 
+      %>
+      <%= "markerize(#{position.longitude},#{position.latitude},'<b>#{position.salesman_id}</b><br/>#{position.salesman_id}');".html_safe 
+      %>
+      <% 
+      end 
+      %>
+      map.addLayer(markers);     
+    </script>  
+    <br /><br /><br /><br />
+  </div>
+
 <p id="notice"><%= notice %></p>
 
 <p>

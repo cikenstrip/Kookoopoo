@@ -250,11 +250,7 @@ a.button2pointo:hover, a.buttonnav:hover {
 .cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=../images/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
 
 
-body {padding:5px; margin:0; font: 12px sans-serif;}
-a {color: #444; text-decoration: none; text-align: right;}
-a:hover {background: #444; color: #FFF;}
-form {padding: 10px;}
-h1 {padding:6px; margin:0px; font-family:sans-serif; font-weight:normal; font-size:20px;}
+
 
 caption {font-size: 1.7em; color: #F06; text-align: left;background:#000;}
 table {margin: 0; padding: 0; border-collapse: collapse; width: 100%;}

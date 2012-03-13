@@ -1,0 +1,48 @@
+<%= form_for(@position) do |f| %>
+  <% if @position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@position.errors.count, "error") %> prohibited this position from being saved:</h2>
+
+      <ul>
+      <% @position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="float:left; padding-right:40px;">
+    <div id="map" style="padding:0px; width:400px; height:300px;">
+    <small>Zoom and click on the map to add the place's new coordinate:</small>
+    </div> 
+    <script type="text/javascript"> 
+    var map = new OpenLayers.Map('map');
+    var gmap = new OpenLayers.Layer.Google("Google Streets",{numZoomLevels: 20});
+    map.addLayers([gmap]);
+    map.addControl(new OpenLayers.Control.MousePosition());
+    map.setCenter(new OpenLayers.LonLat(106.84517, -6.21154), 11);  
+    map.events.register("click", map, function(evt) { 
+      var lonlat = map.getLonLatFromViewPortPx(evt.xy);
+      OpenLayers.Util.getElement("position_latitude").value = lonlat.lat;
+      OpenLayers.Util.getElement("position_longitude").value = lonlat.lon;      
+    });
+    </script>  
+    <br /><br /><br /><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :salesman_id %><br />
+    <%= f.number_field :salesman_id %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

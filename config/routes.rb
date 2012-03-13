@@ -1,4 +1,6 @@
 Kookoopoo::Application.routes.draw do    
+  resources :positions
+
   resources :purchaseorders
   resources :salesmen
  

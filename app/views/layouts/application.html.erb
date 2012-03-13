@@ -45,9 +45,9 @@
       map.addLayers([gmap]);
       map.setCenter(new OpenLayers.LonLat(106.84517, -6.21154), 11);         
       var markers = new OpenLayers.Layer.Markers("Markers");
-      var size = new OpenLayers.Size(48,48);
+      var size = new OpenLayers.Size(32,32);
       var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-      var icon = new OpenLayers.Icon('http://<%= request.env["HTTP_HOST"] %>/images/markerz.png',size,offset);
+      var icon = new OpenLayers.Icon('http://<%= request.env["HTTP_HOST"] %>/assets/markerz.png',size,offset);
       function markerize(lat,lon,html) {
         marker = new OpenLayers.Marker(new OpenLayers.LonLat(lat,lon),icon.clone());    
         marker.events.register('mousedown', marker, function(evt) { 
@@ -60,13 +60,13 @@
         markers.addMarker(marker); 
       }
       <%
-      #@places = Place.find(:all,:order=>"random()", :limit=>"3")
-      #@places.each do |place| 
+      @positions = Position.find(:all,:limit=>"5")
+      @positions.each do |position| 
       %>
-      <%= #"markerize(#{place.longitude},#{place.latitude},'<b>#{place.name}</b><br/>#{place.streetaddress}');".html_safe 
+      <%= "markerize(#{position.longitude},#{position.latitude},'<b>#{position.salesman_id}</b><br/>#{position.salesman_id}');".html_safe 
       %>
       <% 
-      #end 
+      end 
       %>
       map.addLayer(markers);     
     </script>         

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Salesman:</b>
+  <%= @position.salesman_id %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @position.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @position.latitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_position_path(@position), :class=>"buttons"  %> |
+<%= link_to 'Back', positions_path, :class=>"buttons"  %>
