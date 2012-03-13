@@ -14,6 +14,7 @@ class SalesmenController < ApplicationController
   # GET /salesmen/1.json
   def show
     @salesman = Salesman.find(params[:id])
+    @positions = Position.find(:all,:conditions=>{:salesman_id=>params[:id]},:limit=>"10")
 
     respond_to do |format|
       format.html # show.html.erb

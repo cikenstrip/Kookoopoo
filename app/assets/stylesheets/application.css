@@ -283,7 +283,7 @@ table th:last-child {
 #tableheader {width:100%; margin:4px 0; padding:20px 0; color:#fff; 
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	}
 #tableheader h1 {color:#fff; padding-left:20px;}
-#tableinfo {width:100%; margin:2px 0; padding:12px 0; color:#333; line-height:0.7em;
+#tableinfo {width:100%; margin:2px 0; padding:12px 0; color:#333; line-height:0.7em; font-size:12px;
 -moz-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px;	
 background-image: linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
 background-image: -o-linear-gradient(bottom, rgb(176,176,176) 31%, rgb(219,219,219) 73%, rgb(235,235,235) 100%);
