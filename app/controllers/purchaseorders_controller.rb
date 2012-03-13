@@ -9,6 +9,15 @@ class PurchaseordersController < ApplicationController
       format.json { render json: @purchaseorders }
     end
   end
+  
+  def search
+    paramspurchasenumber = params[:purchasenumber]
+    @purchaseorders = Purchaseorder.find(:all, :conditions=>{:purchasenumber=>paramspurchasenumber})
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @purchaseorders }
+    end
+  end
 
   # GET /purchaseorders/1
   # GET /purchaseorders/1.json

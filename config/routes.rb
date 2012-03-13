@@ -1,7 +1,11 @@
 Kookoopoo::Application.routes.draw do    
   resources :positions
 
-  resources :purchaseorders
+  resources :purchaseorders do
+	collection do
+		get 'search'
+    end
+  end 
   resources :salesmen
  
   resources :customers do

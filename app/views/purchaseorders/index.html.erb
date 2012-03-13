@@ -29,3 +29,9 @@
 <br />
 
 <%= link_to 'New Purchaseorder', new_purchaseorder_path, :class=>'buttons' %>
+
+<%= form_tag({:controller =>"purchaseorders", :action=>"search"}, :method => "get") do %><%# form dengan get %>
+<%# form_tag(:controller =>"purchaseorders", :action=>"search") do %><%# form dengan get di route nya harus di ganti juga %>
+  <%= text_field_tag(:purchasenumber) %>
+  <%= submit_tag("Search Purchase Number") %>
+<% end %>
