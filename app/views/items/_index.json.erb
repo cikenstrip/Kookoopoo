@@ -1,0 +1,12 @@
+[
+<% @items.each do |item| %>
+{
+"category":"<%= item.category %>",
+"code": "<%= item.code %>",
+"id": "<%= item.id %>",
+"name": "<%= item.name %>",
+"price": "<%= item.price %>",
+"unit": "<%= item.unit %>"
+} <%= "," if (item.id != @items.last.id) %>
+<% end %>
+]
