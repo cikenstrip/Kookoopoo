@@ -1,4 +1,6 @@
 Kookoopoo::Application.routes.draw do    
+  resources :purchase_order_items
+
   resources :positions
 
   resources :purchaseorders do

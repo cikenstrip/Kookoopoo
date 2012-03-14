@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Purchase order:</b>
+  <%= @purchase_order_item.purchase_order_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @purchase_order_item.item_id %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @purchase_order_item.unit %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @purchase_order_item.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchase_order_item_path(@purchase_order_item), :class=>'buttons' %>
+<%= link_to 'Back', purchase_order_items_path, :class=>'buttons' %>

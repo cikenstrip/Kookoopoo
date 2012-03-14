@@ -1,11 +1,12 @@
 [
-<% @visiting_route.each do |visiting_route| %>
-{
-"customer_id": <%= visiting_route.customer_id %>,
-"customer_name": "<%= Customer.find(visiting_route.customer_id).name %>",
-"id": <%= visiting_route.id %>,
-"salesman_id": <%= @paramsalesmanid %>,
-"salesman_name": "<%= Salesman.find(visiting_route.salesman_id).name %>"
-} <%= "," if (visiting_route.id != @visiting_route.last.id) %>
-<% end %>
+	<% @visiting_route.each do |visiting_route| %>
+		{
+			"customer_id": <%= visiting_route.customer_id %>,
+			"customer_name": "<%= Customer.find(visiting_route.customer_id).name %>",
+			"id": <%= visiting_route.id %>,
+			"salesman_id": <%= @paramsalesmanid %>,
+			"salesman_name": "<%= Salesman.find(visiting_route.salesman_id).name %>"
+		} 
+		<%= "," if (visiting_route.id != @visiting_route.last.id) %>
+	<% end %>
 ]

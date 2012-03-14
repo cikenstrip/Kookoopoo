@@ -1,0 +1,29 @@
+<h1>Listing purchase_order_items</h1>
+
+<table>
+  <tr>
+    <th>Purchase order</th>
+    <th>Item</th>
+    <th>Unit</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchase_order_items.each do |purchase_order_item| %>
+  <tr>
+    <td><%= purchase_order_item.purchase_order_id %></td>
+    <td><%= purchase_order_item.item_id %></td>
+    <td><%= purchase_order_item.unit %></td>
+    <td><%= purchase_order_item.amount %></td>
+    <td><%= link_to 'Show', purchase_order_item, :class=>'buttons' %></td>
+    <td><%= link_to 'Edit', edit_purchase_order_item_path(purchase_order_item), :class=>'buttons' %></td>
+    <td><%= link_to 'Destroy', purchase_order_item, confirm: 'Are you sure?', method: :delete, :class=>'buttons' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchase order item', new_purchase_order_item_path, :class=>'buttons' %>
