@@ -11,8 +11,8 @@ class PurchaseordersController < ApplicationController
   end
   
   def search
-    paramspurchasenumber = params[:purchasenumber]
-    @purchaseorders = Purchaseorder.find(:all, :conditions=>{:purchasenumber=>paramspurchasenumber})
+	salesmen = Salesman.find(:all, :conditions=>{:employeeid=>params[:employeeid]})
+    @purchaseorders = Purchaseorder.find(:all, :conditions=>{:salesmen_id=>salesmen})
     respond_to do |format|
       format.html { render :index }
       format.json { render json: @purchaseorders }
