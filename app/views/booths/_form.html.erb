@@ -1,0 +1,34 @@
+<%= form_for(@booth,:html => { :multipart => true }) do |f| %>
+  <% if @booth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booth.errors.count, "error") %> prohibited this booth from being saved:</h2>
+
+      <ul>
+      <% @booth.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />    
+    <%= image_tag @booth.photo.url(:medium) %><br />
+    <%= f.file_field :photo %>    
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

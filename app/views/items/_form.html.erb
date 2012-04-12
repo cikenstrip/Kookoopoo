@@ -28,7 +28,8 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :photo %><br />
+    <%= f.label :photo %><br />    
+    <%= image_tag @item.photo.url(:medium) %><br />
     <%= f.file_field :photo %>    
   </div>
   <div class="field">

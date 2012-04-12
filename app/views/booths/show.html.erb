@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @booth.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @booth.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @booth.description %>
+</p>
+
+<p>
+  <b>Photo:</b><br />
+  <%= image_tag @booth.photo.url(:medium) %>
+</p>
+
+
+<%= link_to 'Edit', edit_booth_path(@booth) %> |
+<%= link_to 'Back', booths_path %>

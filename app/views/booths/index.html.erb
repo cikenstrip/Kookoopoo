@@ -1,0 +1,29 @@
+<div id="tableheader">
+<h1>Listing booths</h1>
+</div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>Manage</th>
+  </tr>
+
+<% @booths.each do |booth| %>
+  <tr>
+    <td><%= booth.name %></td>
+    <td><%= booth.address %></td>
+    <td><%= booth.description %></td>
+    <td>
+      <%= link_to 'Show', booth %>
+      <%= link_to 'Edit', edit_booth_path(booth) %>
+      <%= link_to 'Destroy', booth, confirm: 'Are you sure?', method: :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Booth', new_booth_path, :class=>'buttons' %>
