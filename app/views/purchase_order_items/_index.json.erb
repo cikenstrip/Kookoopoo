@@ -1,15 +1,14 @@
 [
 	<% @purchase_order_items.each do |purchase_order_items| %>
 		{
-			"amount": <%= purchase_order_items.amount %>,
-			"created_at": <%= purchase_order_items.created_at %>,
-			"id": <%= purchase_order_items.id %>,
-			"item_id": <%= purchase_order_items.item_id %>,
+			"amount": "<%= purchase_order_items.amount %>",
+			"id": "<%= purchase_order_items.id %>",
+			"item_id": "<%= purchase_order_items.item_id %>",
 			"code": "<%= Item.find(purchase_order_items.item_id).code %>",
 			"name": "<%= Item.find(purchase_order_items.item_id).name %>",
-			"purchase_order_id": <%= purchase_order_items.purchase_order_id %>,
-			"unit": <%= purchase_order_items.unit %>,
-			"updated_at": <%= purchase_order_items.updated_at %>
+			"purchase_order_id": "<%= purchase_order_items.purchase_order_id %>",
+			"purchase_order_number": "<%= Purchaseorder.find(purchase_order_items.purchase_order_id).purchasenumber%>",
+			"unit": "<%= purchase_order_items.unit %>"
 		}
 		<%= "," if (purchase_order_items.id != @purchase_order_items.last.id) %>
 	<% end %>
