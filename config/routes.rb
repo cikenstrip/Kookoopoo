@@ -24,7 +24,11 @@ Kookoopoo::Application.routes.draw do
  
   resources :manageroutes
 
-  resources :routelist
+  resources :routelist do
+	collection do
+		get 'search'
+    end
+  end
 
   resources :assignroutes
 

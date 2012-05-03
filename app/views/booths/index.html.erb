@@ -16,9 +16,9 @@
     <td><%= booth.address %></td>
     <td><%= booth.description %></td>
     <td>
-      <%= link_to 'Show', booth %>
-      <%= link_to 'Edit', edit_booth_path(booth) %>
-      <%= link_to 'Destroy', booth, confirm: 'Are you sure?', method: :delete %>
+      <%= link_to 'Show', booth, :class=>'buttons' %>
+      <%= link_to 'Edit', edit_booth_path(booth), :class=>'buttons' %>
+      <%= link_to 'Destroy', booth, confirm: 'Are you sure?', method: :delete, :class=>'buttons' %>
     </td>
   </tr>
 <% end %>
